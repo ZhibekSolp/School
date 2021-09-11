@@ -1,3 +1,8 @@
 from django.db import models
 
-# Create your models here.
+
+class Lessons(models.Model):
+    name = models.CharField(verbose_name='Название урока')
+
+    class Meta:
+        verbose_name_plural = 'Уроки'
