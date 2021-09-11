@@ -12,17 +12,15 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.CreateModel(
-            name='Teachers',
+            name='HeadTeacher',
             fields=[
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('title', models.CharField(max_length=255, verbose_name='Учителя')),
                 ('fullname', models.CharField(max_length=255, verbose_name='ФИО')),
-                ('address', models.CharField(max_length=255, verbose_name='Место проживания')),
-                ('phone', models.CharField(max_length=255, unique=True, verbose_name='Номер телефона')),
-                ('photo', models.ImageField(blank=True, upload_to='', verbose_name='Фото директора')),
+                ('photo', models.ImageField(blank=True, upload_to='', verbose_name='Фото завуча')),
+                ('number', models.IntegerField(default=0, verbose_name='Номер')),
             ],
             options={
-                'verbose_name_plural': 'Учителя',
+                'verbose_name_plural': 'Завучи',
             },
         ),
     ]

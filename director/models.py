@@ -1,5 +1,7 @@
 from django.db import models
 
+
+
 class Director(models.Model):
     fullname = models.CharField(verbose_name='ФИО', max_length=255)
     photo = models.ImageField(verbose_name='Фото директора', blank=True)

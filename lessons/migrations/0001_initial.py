@@ -14,16 +14,14 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.CreateModel(
-            name='Classes',
+            name='Lessons',
             fields=[
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('classletter', models.CharField(max_length=255, verbose_name='Буква класса')),
-                ('numberofclass', models.IntegerField(default=0, unique=True, verbose_name='Номер класса')),
-                ('superviser', models.CharField(max_length=255, verbose_name='Классный руководитель')),
+                ('name', models.CharField(max_length=255, verbose_name='Название урока')),
                 ('teachers', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='teachers.teachers', verbose_name='Учитель')),
             ],
             options={
-                'verbose_name_plural': 'Классы',
+                'verbose_name_plural': 'Уроки',
             },
         ),
     ]
