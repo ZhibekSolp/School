@@ -7,8 +7,8 @@ class Classes(models.Model):
     superviser = models.CharField(verbose_name='Классный руководитель', max_length=255)
 
 
-class Meta:
-    verbose_name_plural = 'Классы'
+    class Meta:
+        verbose_name_plural = 'Классы'
 
     def __str__(self):
         return self.classletter
